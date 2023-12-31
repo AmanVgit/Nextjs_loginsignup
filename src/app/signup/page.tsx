@@ -44,7 +44,7 @@ export default function SignUpPage() {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen py-2">
-            <h1 className="text-2xl font-semibold mb-4">{loading ? "Processing" : "Signup"}</h1>
+            <h1 className="select-none text-2xl font-semibold mb-4">{loading ? "Processing" : "Signup"}</h1>
 
             <div className="flex flex-col space-y-2">
                 {/* Email Field */}
@@ -55,7 +55,7 @@ export default function SignUpPage() {
                     onChange={(e) => setUser({ ...user, email: e.target.value })}
                     placeholder="Email"
                     autoComplete="off"
-                    className="p-2 border rounded-md text-black"
+                    className="select-none p-2 border rounded-md text-black"
                 />
 
                 {/* Username Field */}
@@ -66,7 +66,7 @@ export default function SignUpPage() {
                     onChange={(e) => setUser({ ...user, username: e.target.value })}
                     placeholder="Username"
                     autoComplete="off"
-                    className="p-2 border rounded-md  text-black"
+                    className="select-none p-2 border rounded-md  text-black"
                 />
 
                 {/* Password Field */}
@@ -77,17 +77,17 @@ export default function SignUpPage() {
                     onChange={(e) => setUser({ ...user, password: e.target.value })}
                     autoComplete="off"
                     placeholder="Password"
-                    className="p-2 border rounded-md  text-black"
+                    className="select-none p-2 border rounded-md  text-black"
                 />
 
                 {/* Signup Button */}
                 <button
                     onClick={onSignup}
-                    className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
+                    className="select-none bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
                 >
                     {buttonDisabled ? "No signup" : "Signup"}
                 </button>
-                <Link href="/login" className="text-white-500 hover:underline hover:animate-pulse">Already have an account?</Link>
+                <Link href="/login" className="select-none text-white-500 hover:underline hover:animate-pulse">Already have an account?</Link>
             </div>
         </div>
     );

@@ -42,7 +42,7 @@ export default function loginPage() {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen py-2">
-            <h1 className="text-2xl font-semibold mb-4">{loading ? "Processing" : "Login"}</h1>
+            <h1 className="select-none text-2xl font-semibold mb-4">{loading ? "Processing" : "Login"}</h1>
 
             <div className="flex flex-col space-y-2">
 
@@ -55,7 +55,7 @@ export default function loginPage() {
                     onChange={(e) => setUser({ ...user, email: e.target.value })}
                     placeholder="email"
                     autoComplete="off"
-                    className="p-2 border rounded-md  text-black"
+                    className="select-none p-2 border rounded-md  text-black"
                 />
 
                 {/* Password Field */}
@@ -66,17 +66,17 @@ export default function loginPage() {
                     onChange={(e) => setUser({ ...user, password: e.target.value })}
                     autoComplete="off"
                     placeholder="Password"
-                    className="p-2 border rounded-md  text-black"
+                    className="select-none p-2 border rounded-md  text-black"
                 />
 
                 {/* Signin Button */}
                 <button
                     onClick={onLogin}
-                    className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
+                    className="select-none bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
                 >
                     Login
                 </button>
-                <Link href="/signup" className="text-white-500 hover:underline hover:animate-pulse">Create an account?</Link>
+                <Link href="/signup" className="select-none text-white-500 hover:underline hover:animate-pulse">Create an account?</Link>
             </div>
         </div>
     );
